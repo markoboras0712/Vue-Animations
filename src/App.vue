@@ -2,9 +2,9 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/list">List</router-link>
     </div>
-    <transition name="fade" mode="out-in">
+    <transition name="slide-fade" mode="out-in">
       <router-view />
     </transition>
   </div>
@@ -55,13 +55,40 @@ button {
   background-color: #e0e0e0;
 }
 
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
+}
+
+p {
+  font-size: 0.8em;
+}
+
+::placeholder {
+  color: #2c3e50;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/*** TRANSITIONS ***/
+/*** TRANSITIONS ***/
 .fade-enter {
   opacity: 0;
 }
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 1s ease-out;
+  transition: opacity 0.5s ease-out;
 }
 
 .fade-leave-to {
@@ -69,17 +96,30 @@ button {
 }
 
 .slide-fade-enter {
-      transform: translateX(10px);
-      opacity: 0;
-    }
-    
-    .slide-fade-enter-active,
-    .slide-fade-leave-active {
-      transition: all 0.2s ease;
-    }
-    
-    .slide-fade-leave-to {
-      transform: translateX(-10px);
-      opacity: 0;
-    }
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: all 0.2s ease;
+}
+
+.slide-fade-leave-to {
+  transform: translateX(-10px);
+  opacity: 0;
+}
+
+.slide-up-enter {
+  transform: translateY(10px);
+  opacity: 0;
+}
+
+.slide-up-enter-active {
+  transition: all 0.2s ease;
+}
+
+.slide-up-move {
+  transition: transform 0.8s ease-in;
+}
 </style>
