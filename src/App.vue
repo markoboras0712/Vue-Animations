@@ -7,7 +7,8 @@
       <router-link to="/cards">Cards</router-link> |
       <router-link to="/simple">Simple GSAP</router-link> |
       <router-link to="/stagger">Stagger list GSAP</router-link> |
-      <router-link to="/state">State</router-link>
+      <router-link to="/state">State</router-link> |
+      <router-link to="/timeline">Timeline</router-link>
     </div>
     <transition name="slide-fade" mode="out-in">
       <router-view />
