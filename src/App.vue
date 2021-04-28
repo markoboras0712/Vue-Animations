@@ -4,7 +4,9 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/list">List</router-link> |
       <router-link to="/drawer">Drawer</router-link> |
-      <router-link to="/cards">Cards</router-link>
+      <router-link to="/cards">Cards</router-link> |
+      <router-link to="/simple">Simple GSAP</router-link> |
+      <router-link to="/stagger">Stagger list GSAP</router-link>
     </div>
     <transition name="slide-fade" mode="out-in">
       <router-view />

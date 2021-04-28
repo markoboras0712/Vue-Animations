@@ -38,6 +38,18 @@ export default new Router({
       name: 'cards',
       component: () =>
         import(/* webpackChunkName: "list" */ './views/Cards.vue')
+    },
+    {
+      path: '/simple',
+      name: 'simple',
+      component: () =>
+        import(/* webpackChunkName: "simple" */ './views/Simple.vue')
+    },
+    {
+      path: '/stagger',
+      name: 'stagger',
+      component: () =>
+        import(/* webpackChunkName: "stagger" */ './views/Stagger.vue')
     }
   ]
 });
